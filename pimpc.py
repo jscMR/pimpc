@@ -11,16 +11,19 @@ pygame.mixer.init()
 button_drum = Button(2)
 button_snare = Button(3)
 button_hihat = Button(4)
+button_bass = Button(17)
 
 # Samples
 drum = Sound("samples/factory/Bassdrum.wav")
 snare_one = Sound('samples/factory/Snare 1.wav')
 hit_hat = Sound('samples/factory/Open Hat.wav')
+bass = Sound('samples/factory/Bass.wav')
 
 
 # Press buttons
 button_drum.when_pressed = drum.play
 button_snare.when_pressed = snare_one.play
 button_hihat.when_pressed = hit_hat.play
+button_bass.when_pressed = bass.play
 
 pause()
