@@ -21,17 +21,29 @@ bass = Sound('samples/factory/Bass.wav')
 
 arrange = [drum, snare_one, hit_hat, bass]
 
+sound_index = null
 
 
-def play_sound (sound):
+def play_sound ():
     print('Play sound ' + str(sound))
     arrange[sound].play()
 
+# -----------------
 # Press buttons
-button_drum.when_pressed = play_sound(0)
-button_snare.when_pressed = play_sound(1)
-button_hihat.when_pressed = play_sound(2)
-button_bass.when_pressed = play_sound(3)
+# -----------------
 
-
-pause()
+while True:
+    if button_drum.is_pressed:
+        print("Drum is pressed")
+        play_sound(0)
+    else if button_snare.is_pressed:
+        print('Snare is pressed')
+        play_sound(1)
+    else if button_hihat.is_pressed:
+        print('Hihat is pressed')
+        play_sound(2)
+    else if button_bass.is_pressed:
+        print('Bass is pressed')
+        play_sound(3)
+    else:
+        print("Waiting for press buttons...")
