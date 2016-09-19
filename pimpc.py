@@ -24,7 +24,7 @@ arrange = [drum, snare_one, hit_hat, bass]
 
 
 def play_sound (sound):
-    print('Play sound ' + sound)
+    print('Play sound ' + str(sound))
     arrange[sound].play()
 
 # Press buttons
