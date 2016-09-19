@@ -21,9 +21,9 @@ bass = Sound('samples/factory/Bass.wav')
 
 arrange = [drum, snare_one, hit_hat, bass]
 
-def play_sound ():
-    print('Play sound ' + str(sound))
-    arrange[sound].play()
+def play_sound (index):
+    print('Play sound ' + str(index))
+    arrange[index].play()
 
 # -----------------
 # Press buttons
