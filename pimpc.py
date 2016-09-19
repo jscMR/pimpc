@@ -33,17 +33,20 @@ def play_sound ():
 # -----------------
 
 while True:
+    # Drum
     if button_drum.is_pressed:
         print("Drum is pressed")
         play_sound(0)
-    else if button_snare.is_pressed:
+    
+    if button_snare.is_pressed:
         print('Snare is pressed')
         play_sound(1)
-    else if button_hihat.is_pressed:
+    
+    if button_hihat.is_pressed:
         print('Hihat is pressed')
         play_sound(2)
-    else if button_bass.is_pressed:
+    
+    if button_bass.is_pressed:
         print('Bass is pressed')
         play_sound(3)
-    else:
-        print("Waiting for press buttons...")
+    
