@@ -19,11 +19,19 @@ snare_one = Sound('samples/factory/Snare 1.wav')
 hit_hat = Sound('samples/factory/Open Hat.wav')
 bass = Sound('samples/factory/Bass.wav')
 
+arrange = [drum, snare_one, hit_hat, bass]
 
 # Press buttons
-button_drum.when_pressed = drum.play
-button_snare.when_pressed = snare_one.play
-button_hihat.when_pressed = hit_hat.play
-button_bass.when_pressed = bass.play
+button_drum.when_pressed = play_sound(0)
+button_snare.when_pressed = play_sound(1)
+button_hihat.when_pressed = play_sound(2)
+button_bass.when_pressed = play_sound(3)
+
+
+def play_sound (sound):
+    print('Play sound ' + sound)
+    arrange[sound].play()
+    
+
 
 pause()
